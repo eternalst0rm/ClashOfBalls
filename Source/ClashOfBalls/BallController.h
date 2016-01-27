@@ -13,9 +13,17 @@ class CLASHOFBALLS_API ABallController : public APlayerController
 {
 	GENERATED_BODY()
 	
-		FTimerHandle RespawnHandle;
+	FTimerHandle RespawnHandle;
 
 	FTimerHandle DeathPointHandle;
+
+	virtual void AddDeath_Implementation();
+
+	virtual bool AddDeath_Validate();
+
+	virtual void NotifyKiller_Implementation(bool friendly);
+
+	virtual bool NotifyKiller_Validate(bool friendly);
 
 	virtual void Respawn_Implementation();
 
@@ -41,6 +49,12 @@ public:
 
 	UFUNCTION(Server, Reliable, WithValidation)
 		void StartRespawn();
+
+	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable, Category = "Notify")
+		void AddDeath();
+
+	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable, Category = "Notify")
+		void NotifyKiller(bool friendly);
 
 	// ######################################################### flag for IsDead
 

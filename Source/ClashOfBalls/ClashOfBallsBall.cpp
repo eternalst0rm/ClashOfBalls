@@ -200,6 +200,9 @@ float AClashOfBallsBall::TakeDamage(float Damage, struct FDamageEvent const& Dam
 					}
 					// spawn death point
 
+					controller->AddDeath();
+					controller->NotifyKiller(false);
+
 					controller->StartRespawn();
 					controller->UnPossess();
 					this->Destroy();

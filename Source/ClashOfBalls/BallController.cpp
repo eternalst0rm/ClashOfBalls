@@ -5,6 +5,7 @@
 #include "ClashOfBallsBall.h"
 #include "SpawnPoint.h"
 #include "BaseGameMode.h"
+#include "BasePlayerState.h"
 #include "BallController.h"
 
 // replicate attributes
@@ -19,6 +20,41 @@ void ABallController::GetLifetimeReplicatedProps(TArray< FLifetimeProperty > & O
 void ABallController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+}
+
+void ABallController::AddDeath_Implementation()
+{
+	ABasePlayerState *playerState = Cast<ABasePlayerState>(this->PlayerState);
+	if (playerState)
+	{
+		playerState->IncrementDeaths();
+	}
+}
+
+bool ABallController::AddDeath_Validate()
+{
+	return true;
+}
+
+void ABallController::NotifyKiller_Implementation(bool friendly)
+{
+	if (KilledBy)
+	{
+		AClashOfBallsBall *enemy = Cast<AClashOfBallsBall>(KilledBy);
+		if (enemy)
+		{
+			ABasePlayerState *playerState = Cast<ABasePlayerState>(enemy->PlayerState);
+			if (playerState)
+			{
+				playerState->IncrementKills(friendly);
+			}
+		}
+	}
+}
+
+bool ABallController::NotifyKiller_Validate(bool friendly)
+{
+	return true;
 }
 
 // respawn player
