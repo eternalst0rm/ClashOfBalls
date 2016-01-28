@@ -1,0 +1,130 @@
+Clash Of Balls Game Asset List ----
+
+
+Abilities ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Explosion - The Player explodes damaging all Balls around them within a set radius. Killing The (Self Player As Well) (Radius Undetermined)
+
+
+Dash      - Locks on Nearest Enemy Player in camera view and launches towards that player if hits launches both players backwards (Can Be Used In The Air)
+
+
+
+
+
+
+
+
+
+Assets For Abilities ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Explosion - Smoke Particle Effect 
+	  - Fire Particle Effect
+          - Sparks Particle Effect
+          - Explosion Sound Effects (Play Sounds (3) Random In Cue)
+	  - Death Icon For Kill Board - Bomb With Clouds Around it
+
+
+Dash      - Pink Dash Streak Particle Effect
+	  - Spark Particle Effect - (If Hit)
+          - Death Icon For Kill Board - Ball with Arrow 2 Arrows pointing to ball. 
+          
+
+
+
+
+
+
+Pickups -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Speed Boost  - Increases Speed Velocity By 25 % For 7 Seconds Spawns Sparks on the ground following the player with the powerup. If Self is killed Player is killed with a cloud of Yellow smoke
+
+
+
+
+Active Cloak - Makes the self ball blend in with the environment for 5 Seconds if ball collides with another ball it flickers  
+
+
+
+
+
+
+
+
+Assets For Pickups ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Speed Boost - Yellow Trail On back of the ball
+	    - Sparks Particles
+	    - Green Puff Of Smoke Particle Effect
+	    - Sound Effect (Undetermined)
+	    - Pickup Model (LightingBolt Spinning Mesh Glowy)
+	     
+
+
+
+
+Active Cloak - Material That Sets refraction to 1.
+	     - Pickup Model (Undetermined)
+	     - Pickup Sound (Undetermined)
+
+
+
+
+
+
+
+
+Skins -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Zebra Skin
+
+
+Drone Skin
+
+
+
+
+
+
+
+
+
+
+
+
+
+Maps ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Teachers Desk - 
+
+
+Sci Fi Hanger - 
+
+
+Kids Bedroom  -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Assets For Maps ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
