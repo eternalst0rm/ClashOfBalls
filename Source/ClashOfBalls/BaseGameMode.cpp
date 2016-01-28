@@ -20,40 +20,4 @@ void ABaseGameMode::BeginPlay()
 	{
 		ListRespawn.Add(Cast<ASpawnPoint>(i));
 	}
-
-	TArray<AActor*> listPlayer;
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ABallController::StaticClass(), listPlayer);
-
-	for (AActor* i : listPlayer)
-	{
-		ABallController *PC = Cast <ABallController>(i);
-		if (PC != NULL)
-		{
-			if (PC->IsDead == true)
-			{
-				bool foundSpawn = false;
-				int32 spawnPos = 0;
-				while (foundSpawn == false)
-				{
-					int32 pos = FMath::RandRange(0, ListRespawn.Num() - 1);
-					if (ListRespawn[pos]->IsBlocked == false)
-					{
-						foundSpawn = true;
-						spawnPos = pos;
-					}
-				}
-
-
-				FActorSpawnParameters SpawnParams;
-				SpawnParams.Owner = this;
-				SpawnParams.Instigator = Instigator;
-				AClashOfBallsBall *Spawner = GetWorld()->SpawnActor<AClashOfBallsBall>(DefaultPawnClass, ListRespawn[spawnPos]->GetActorLocation(), ListRespawn[spawnPos]->GetActorRotation(), SpawnParams);
-				if (Spawner)
-				{
-					PC->Possess(Spawner);
-					PC->IsDead = false;
-				}
-			}
-		}
-	}
 }
