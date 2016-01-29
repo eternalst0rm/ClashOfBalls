@@ -10,10 +10,12 @@ Dash      - Locks on Nearest Enemy Player in camera view and launches towards th
 
 
 
+WhirlWind - 4 blades spawn around self players ball that rotate and hit other enemy balls damaging them for 10 Dmg per hit, Lasts 4 Seconds - Cooldown 15 Seconds
 
 
 
 
+AcidGoop  - For 2 Seconds self player expells an acid substance on the ground, Enemy players whom pass through it are slowed and damaged for 20 damage for every second in the stream
 
 
 Assets For Abilities ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -33,12 +35,30 @@ Dash      - Pink Dash Streak Particle Effect
 
 
 
+WhirlWind - Spark Particle Effect 
+	  - 4 Blade Model
+	  - Blade Chopping Sound Effects 
+	  - Death Icon for Killboard - 4 small Blades in a circle
+
+
+
+
+AcidGoop  - Green Acid Particle Effect
+	  - Acid Boiling Sound Effect
+	  - Death Icon For Killboard - 3 Bubbles 
+
+
+
+
+
 
 
 
 Pickups -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Speed Boost  - Increases Speed Velocity By 25 % For 7 Seconds Spawns Sparks on the ground following the player with the powerup. If Self is killed Player is killed with a cloud of Yellow smoke
+
+
 
 
 
@@ -128,3 +148,38 @@ Assets For Maps ----------------------------------------------------------------
 
 
 
+
+
+
+Game Modes ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Clash-
+Player Limit: 8
+Num Of Teams: 0
+Point Limit: 25
+Time Limit:10:00
+Objective: A Free for all game mode, First one to 25 Points wins or whom ever has the most points at the end of the time limit of 10:00 Wins. 
+
+
+Team Clash-
+Player Limit: 16
+Num Of Teams: 2
+Time Limit: 15:00
+Point Limit
+Objective: A Team Based game mode similar to Clash: First Team to 50 Points Or Whom ever has most points at end of the time left Of 15:0 Wins
+
+
+Oddball-
+Player Limit: 16
+Num Of Teams: 2
+Point Limit: 15
+Time Limit: 10:00
+Objective: A random Player is selected to be the odd ball, All other players need to kill the oddball to gain a point, First one to 15 Points wins or time limit of 10:00 Is Exceeded.
+
+Capture & Roll-
+Player Limit: 16
+Num Of Teams: 2
+Point Limit: 100
+Time Limit: 15:00
+Objective:Team A And B Try to capture a selected zone on the map gaining point for every second the zone is not contested with other players.
