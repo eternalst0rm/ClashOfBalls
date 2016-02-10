@@ -18,6 +18,10 @@ WhirlWind - 4 blades spawn around self players ball that rotate and hit other en
 AcidGoop  - For 2 Seconds self player expells an acid substance on the ground, Enemy players whom pass through it are slowed and damaged for 20 damage for every second in the stream
 
 
+
+
+
+
 Assets For Abilities ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
